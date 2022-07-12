@@ -29,7 +29,7 @@ review][prw] from the SRE book. The goal of the readiness review is to make
 sure we have enough documentation, observability, and reliability for the 
 feature, change, or service to run at **<APP_NAME>** production scale.
 
-For **<APP_NAME**>**, this review is meant to facilitate collaboration between 
+For **<APP_NAME>**, this review is meant to facilitate collaboration between 
 Development, DevOps, and Security teams to share and help bridge any gaps about 
 a new service. The review document will serve as a snapshot of what is being 
 deployed and the discussions that surround it. It is not intended to be constantly 
