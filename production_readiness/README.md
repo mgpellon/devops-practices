@@ -1,7 +1,6 @@
 # Production Library and Readiness
 
-This project contains a library of blueprints and designs, and their outcome 
-- production readiness review.
+This project contains a library of blueprints and designs, and their outcome - production readiness review.
 
 ## Overview
 
