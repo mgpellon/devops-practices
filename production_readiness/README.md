@@ -4,8 +4,8 @@ This project contains a library of blueprints and designs, and their outcome - p
 
 ## Overview
 
-The Infrastructure Library contains a snapshot in time of our thinking about 
-the problems we are solving. This happens through two stages:
+The Infrastructure Library contains a snapshot in time of the team's thinking 
+about the problems we are solving. This happens through two stages:
 
 1. We begin with **blueprints**, which define and scope a problem and provide 
 options on how we might approach said problem.
@@ -14,8 +14,8 @@ options on how we might approach said problem.
 design on the solution.
 
 Once we have executed on the design, we create a production readiness review 
-whenever there is a significant change to **<APP_NAME>** infrastructure. This may 
-be a new service, a new feature, or a major infrastructure change.
+whenever there is a significant change to **<APP_NAME>** infrastructure. This 
+may be a new service, a new feature, or a major infrastructure change.
 
 After completing the readiness review, we update the relevant architectural 
 and/or operational documentation.
@@ -25,8 +25,8 @@ and/or operational documentation.
 The Production Readiness Review is a process that helps identify the 
 reliability needs of a service, feature or significant change to 
 infrastructure for **<APP_NAME>**. It loosely follows the [production readiness 
-review][prw] from the SRE book. The goal of the readiness review is to make 
-sure we have enough documentation, observability, and reliability for the 
+review][prw] from the Google SRE book. The goal of the readiness review is to 
+make sure we have enough documentation, observability, and reliability for the 
 feature, change, or service to run at **<APP_NAME>** production scale.
 
 For **<APP_NAME>**, this review is meant to facilitate collaboration between 
@@ -35,21 +35,66 @@ a new service. The review document will serve as a snapshot of what is being
 deployed and the discussions that surround it. It is not intended to be constantly 
 updated.
 
-The review starts by creating a new issue in the readiness project. After this, 
-an MR is created using the example template which is the baseline for the review. 
-We prefer to use an MR for reviewing the readiness document since it allows for 
-inline comments, threaded discussions, and explicit assignments for review.
+## Process
 
-The readiness review MR may go through multiple rounds of review, including merges 
-to mainline. It is recommended to send the first review to team members who are 
-closest to the service or feature. Though most essential readiness questions 
-should be captured in the template, it is fine to add more details as necessary. 
-All non-applicable sections should be noted in the MR.
+The Production Readiness process is authored by the individual directly 
+responsible for the work that is being delivered.
 
-The readiness review needs to be approved by all required reviewers before the 
-change is deployed and is taking production traffic. It is important to start 
-the readiness as early as possible, as early as development and design. If it's 
-not clear on what is needed to make a service scale for **<APP_NAME>**, engage 
-with DevOps Team members on the design phase to receive guidance on the direction.
+1. The author creates an issue which uses the issue template in the readiness 
+project.
+2. The title of the issue should be a descriptive name of change.
+3. The process for the readiness review is specified in the issue in the form 
+of a checklist, the instructions will guide the review author until the review 
+is complete.
+
+### Guidelines for the author
+
+- Be as descriptive as possible when writing this review. Avoid terminology 
+that make it appear as if something is already well known. What may be known
+by one may not be well understood by another.
+
+- Make no assumptions. If an answer cannot be provided, it is better to explain
+why we lack the ability to provide details. This assists in fostering 
+discussion and enables us to spawn new issues if we identify areas of 
+improvement. This is also an excellent avenue for asking for help as needed.
+
+### Guidelines for the reviewer
+
+- As a reviewer of the Production Readiness proposal, your task is to 
+collaborate with the author and decide whether information provided in the 
+proposal is sufficient for production readiness.
+
+- Consider how sections listed in the review template are addressed. It is 
+important that you highlight any shortcomings that you observe. Ensure that
+non-applicable sections are properly noted and that tickets are created if
+there are any gaps that need to be addressed following the change.
 
 [prw]: https://sre.google/sre-book/evolving-sre-engagement-model/
+
+## Directory Structure
+
+The directory structure of this project has
+
+- a single directory per change. 
+
+In each directory there will be one or more markdown documents that break 
+the change into different audiences for reviews. It is not necessary to 
+have more than one markdown document, it will depend on the size of the change.
+
+### Example
+
+```
+<infrastructure change name>
+  \
+    - overview.md
+      * architecture overview
+      * deployment and timeline
+      * risk assessment
+      * security considers, and secrets
+    - monitoring.md
+      * metrics
+      * logging
+      * alerting
+    - testing.md
+      * all testing procedures 
+```
