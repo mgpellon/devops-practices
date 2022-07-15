@@ -25,39 +25,39 @@ reason why next to the name.
 
 #### Mandatory
 
-[] Reliability: reviewer name
-[] Delivery: reviewer name
-[] Security: reviewer name
+- [ ] Reliability: reviewer name
+- [ ] Delivery: reviewer name
+- [ ] Security: reviewer name
 
 #### Optional
 
 Delete these reviewers if they do not apply
 
-[] Development: reviewer name
-[] Database: reviewer name
+- [ ] Development: reviewer name
+- [ ] Database: reviewer name
 
 ### Readiness Checklist
 
 The following items should be completed by the person initiating the 
 readiness review:
 
-[] Create an issue and assign it to yourself. Set a due-date for when you 
+- [ ] Create an issue and assign it to yourself. Set a due-date for when you 
 believe the readiness will be completed (this can be updated later if 
 necessary).
 
-[] In the "Reviewers" section above, add the reviewer names. Names will be 
+- [ ] In the "Reviewers" section above, add the reviewer names. Names will be 
 assigned by reaching out to the engineering manager of the corresponding team.
 
-[] Create the first draft of the readiness review by copying the template below 
+- [ ] Create the first draft of the readiness review by copying the template below 
 and submitting an MR.
 
-[] Add a link to the MR in the "Readiness MR" section at the top of this issue.
+- [ ] Add a link to the MR in the "Readiness MR" section at the top of this issue.
 
-[] Assign the initial set reviewers to the MR. There can be multiple iterations 
+- [ ] Assign the initial set reviewers to the MR. There can be multiple iterations 
 of MR if needed, often it is helpful to have the first draft reviewed by team 
 members in the same team. Approval of the MR does not mean the readiness 
 document is approved, approvals will be done later on this issue.
 
-[] When last review of the MR is complete, ask the reviewers in the "Reviewers" 
+- [ ] When last review of the MR is complete, ask the reviewers in the "Reviewers" 
 section above to check the box next to their name if they are satisfied with 
 the review and have no more questions or concerns.
