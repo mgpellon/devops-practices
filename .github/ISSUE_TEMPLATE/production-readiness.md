@@ -95,3 +95,18 @@ _This Guide is just that, a Guide. If something is not asked, but should be, it 
 - [ ] **Can the new product feature be safely rolled back once it is live, can it be disabled using a feature flag?**
 - [ ] **Document every way the customer will interact with this new feature and how customers will be impacted by a failure of each interaction.**
 - [ ] **As a thought experiment, think of worst-case failure scenarios for this product feature, how can the blast-radius of the failure be isolated?**
+
+## Database
+
+- [ ] **If we use a database, is the data structure verified and vetted by the DBA?**
+- [ ] **Do we have an approximate growth rate of the stored data (for capacity planning)?**
+- [ ] **Can we age data and delete data of a certain age?**
+
+## Security and Compliance
+
+- [ ] **Were the organization's security development guidelines followed for this feature?**
+- [ ] **If this feature requires new infrastructure, will it be updated regularly with OS updates?**
+- [ ] **Has effort been made to obscure or elide sensitive customer data in logging?**
+- [ ] **Is any potentially sensitive user-provided data persisted? If so is this data encrypted at rest?**
+- [ ] **Is the service subject to any regulatory/compliance standards? If so, detail which and provide details on applicable controls, management processes, additional monitoring, and mitigating factors.**
+
