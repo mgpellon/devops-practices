@@ -61,3 +61,37 @@ document is approved, approvals will be done later on this issue.
 - [ ] When last review of the MR is complete, ask the reviewers in the "Reviewers" 
 section above to check the box next to their name if they are satisfied with 
 the review and have no more questions or concerns.
+
+### Readiness MR Template
+
+Expand the section below to view the readiness template, this will be the starting point for the readiness merge request.
+
+**Create `<name>/index.md` as a new merge request with the following content where <name> is something short and descriptive for the change being proposed**
+
+<details>
+
+_While it is encouraged for parts of this document to be filled out, not all of the items below will be relevant. Leave all non-applicable items intact and add the reasons for why in place of the response._
+_This Guide is just that, a Guide. If something is not asked, but should be, it is strongly encouraged to add it as necessary._
+
+## Summary
+
+- [ ] **Provide a high level summary of this new product feature. Explain how this change will benefit the product's customers. Enumerate the customer use-cases.**
+- [ ] **What metrics, including business metrics, should be monitored to ensure will this feature launch will be a success?**
+
+## Architecture
+
+- [ ] **Add architecture diagrams to this issue of feature components and how they interact with existing application components. Include internal dependencies, ports, security policies, etc.**
+- [ ] **Describe each component of the new feature and enumerate what it does to support customer use cases.**
+- [ ] **For each component and dependency, what is the blast radius of failures? Is there anything in the feature design that will reduce this risk?**
+- [ ] **If applicable, explain how this new feature will scale and any potential single points of failure in the design.**
+
+## Operational Risk Assessment
+
+- [ ] **What are the potential scalability or performance issues that may result with this change?**
+- [ ] **List the external and internal dependencies to the application (ex: Redis, MySQL, etc) for this feature and how the it will be impacted by a failure of that dependency.**
+- [ ] **Were there any features cut or compromises made to make the feature launch?**
+- [ ] **List the top three operational risks when this feature goes live.**
+- [ ] **What are a few operational concerns that will not be present at launch, but may be a concern later?**
+- [ ] **Can the new product feature be safely rolled back once it is live, can it be disabled using a feature flag?**
+- [ ] **Document every way the customer will interact with this new feature and how customers will be impacted by a failure of each interaction.**
+- [ ] **As a thought experiment, think of worst-case failure scenarios for this product feature, how can the blast-radius of the failure be isolated?**
