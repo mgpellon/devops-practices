@@ -110,3 +110,40 @@ _This Guide is just that, a Guide. If something is not asked, but should be, it 
 - [ ] **Is any potentially sensitive user-provided data persisted? If so is this data encrypted at rest?**
 - [ ] **Is the service subject to any regulatory/compliance standards? If so, detail which and provide details on applicable controls, management processes, additional monitoring, and mitigating factors.**
 
+## Performance
+
+- [ ] **Are there any potential performance impacts on the database when this feature is enabled at scale?**
+- [ ] **Are there any throttling limits imposed by this feature? If so how are they managed?**
+- [ ] **If there are throttling limits, what is the customer experience of hitting a limit?**
+- [ ] **For all dependencies external and internal to the application, are there retry and back-off strategies for them?**
+- [ ] **Does the feature account for brief spikes in traffic, at least 2x above the expected TPS?**
+
+## Backup and Restore
+
+- [ ] **Outside of existing backups, are there any other customer data that needs to be backed up for this product feature?**
+- [ ] **Are backups monitored?**
+- [ ] **Was a restore from backup tested?**
+
+## Monitoring and Alerts
+
+- [ ] **Is the service logging in JSON format and are logs forwarded to a centralized log store?**
+- [ ] **Is the service reporting metrics to Prometheus?**
+- [ ] **How is the end-to-end customer experience measured?**
+- [ ] **Do we have a target SLA in place for this service?**
+- [ ] **Do we know what the indicators (SLI) are that map to the target SLA?**
+- [ ] **Do we have alerts that are triggered when the SLI's (and thus the SLA) are not met?**
+- [ ] **Do we have troubleshooting runbooks linked to these alerts?**
+- [ ] **What are the thresholds for issuing an official customer notification for an outage related to this feature?**
+- [ ] **Do the on-call rotations responsible for this service have access to this service?**
+
+## Responsibility
+
+- [ ] **Which individuals are the subject matter experts and know the most about this feature?**
+- [ ] **Which team or set of individuals will take responsibility for the reliability of the feature once it is in production?**
+- [ ] **Is someone from the team who built the feature on call for the launch? If not, why not?**
+
+## Testing
+
+- [ ] **Describe the load test plan used for this feature. What breaking points were validated?**
+- [ ] **For the component failures that were theorized for this feature, were they tested? If so include the results of these failure tests.**
+- [ ] **Give a brief overview of what tests are run automatically in our CI/CD pipeline for this feature?**
